@@ -1,7 +1,7 @@
 \documentclass[journal=langd5,manuscript=article]{achemso}
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL optimizing01.tex   Sat Feb 16 07:06:35 2019
-%DIF ADD optimizing02.tex   Sat Feb 16 09:32:14 2019
+%DIF ADD optimizing02.tex   Sat Feb 16 11:40:19 2019
 
 \usepackage[version=4]{mhchem} % Formula subscripts using \ce{}
 \usepackage{chemfig}
@@ -319,7 +319,8 @@ All samples are prepared in identical \SI{12}{\milli\liter}
 glass vials to produce \SI{5}{\milli\liter} of colloidal dispersion.
 The vials are sealed to ensure consistent evaporation of ammonia
 from run to run.
-Identical stir bars are used for all syntheses to ensure consistent flow properties.
+Identical stir bars are used for all syntheses to ensure consistent
+flow properties.
 
 \subsection{Holographic particle characterization}
 \label{sec:holographicparticlecharacterization}
@@ -353,17 +354,23 @@ beam in the focal plane of the microscope's objective lens.
 The objective lens relays this interference pattern to a tube
 lens that focuses it onto the sensor of a digital video camera.
 The intensity of the recorded interference pattern is
-a hologram of the particle that can be analyzed to obtain information
+a hologram of the particle that can be analyzed \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\cite{lee07a}
+}\hspace{0pt}%DIFAUXCMD
+}\DIFaddend to obtain information
 about the particle's position and composition.
 The instrument's analytical software fits each hologram 
 to predictions of the Lorenz-Mie theory of light scattering
-to measure the associated particle's diameter and refractive index, as well as its
+\DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\cite{bohren83,mishchenko02,gouesbet11}
+}\hspace{0pt}%DIFAUXCMD
+}\DIFaddend to measure the associated particle's diameter and refractive index, as well as its
 three-dimensional position relative to the center of the 
 focal plane \cite{lee07a}.
 Each particle is recorded and analyzed multiple times during its
 transit through the observation volume\DIFdelbegin \DIFdel{to ensure reliable characterization results.
 }\DIFdelend \DIFaddbegin \DIFadd{.
-Time-resolved observations are linked into trajectories
+These time-resolved observations are linked into trajectories
 using a maximum likelihood algorithm
 \mbox{%DIFAUXCMD
 \cite{crocker1996methods}}\hspace{0pt}%DIFAUXCMD
@@ -379,7 +386,7 @@ a particle's diameter with a precision of
 \mbox{%DIFAUXCMD
 \SI{5}{\nm} }\hspace{0pt}%DIFAUXCMD
 and its refractive index to
-within a part per thousand
+within five parts per thousand
 \mbox{%DIFAUXCMD
 \cite{krishnatreya14,wang2016holographic}}\hspace{0pt}%DIFAUXCMD
 .
@@ -391,10 +398,22 @@ axial position to within \mbox{%DIFAUXCMD
 \mbox{%DIFAUXCMD
 \cite{cheong2009flow,krishnatreya14}}\hspace{0pt}%DIFAUXCMD
 .
+These measurements' accuracy and precision have
+been validated with measurements on standard
+particles \mbox{%DIFAUXCMD
+\cite{lee07a,wang2016holographic}}\hspace{0pt}%DIFAUXCMD
+,
+by comparison with orthogonal techniques \mbox{%DIFAUXCMD
+\cite{wang2016holographic}}\hspace{0pt}%DIFAUXCMD
+,
+and through analysis of well-understood physical processes
+\mbox{%DIFAUXCMD
+\cite{krishnatreya14}}\hspace{0pt}%DIFAUXCMD
+.
 }\DIFaddend 
 
 \DIFaddbegin \DIFadd{Originally demonstrated with dispersions of model
-colloidal spheres of various compositions \mbox{%DIFAUXCMD
+colloidal spheres \mbox{%DIFAUXCMD
 \cite{lee07a}}\hspace{0pt}%DIFAUXCMD
 ,
 holographic particle characterization has been
@@ -407,18 +426,6 @@ dimpled spheres \mbox{%DIFAUXCMD
 and fractal aggregates \mbox{%DIFAUXCMD
 \cite{wang2016fractal}}\hspace{0pt}%DIFAUXCMD
 .
-It has been used to monitor protein aggregation 
-in biopharmaceuticals
-\mbox{%DIFAUXCMD
-\cite{wang2016holographic,kasimbeg2019holographic}}\hspace{0pt}%DIFAUXCMD
-, 
-nanoparticle agglomeration in semiconductor polishing
-slurries \mbox{%DIFAUXCMD
-\cite{cheong17} }\hspace{0pt}%DIFAUXCMD
-and oil droplet concentration in
-wastewater \mbox{%DIFAUXCMD
-\cite{philips2017holographic}}\hspace{0pt}%DIFAUXCMD
-.
 Time-resolved holographic characterization has been used to
 monitor the growth of colloidal polydimethylsiloxane (PDMS)
 spheres \mbox{%DIFAUXCMD
@@ -430,6 +437,18 @@ sensors to changing environmental conditions
 and molecular binding
 to the surface of functionalized beads \mbox{%DIFAUXCMD
 \cite{cheong2009flow}}\hspace{0pt}%DIFAUXCMD
+.
+Practical applications include monitoring protein aggregation 
+in biopharmaceuticals
+\mbox{%DIFAUXCMD
+\cite{wang2016holographic,kasimbeg2019holographic}}\hspace{0pt}%DIFAUXCMD
+, 
+nanoparticle agglomeration in semiconductor polishing
+slurries \mbox{%DIFAUXCMD
+\cite{cheong17} }\hspace{0pt}%DIFAUXCMD
+and oil droplet concentration in
+wastewater \mbox{%DIFAUXCMD
+\cite{philips2017holographic}}\hspace{0pt}%DIFAUXCMD
 .
 }
 
@@ -449,18 +468,20 @@ We analyze each sample by pipetting \SI{100}{\micro\liter} of the diluted
 dispersion into an xCell microfluidic sample cell and loading the xCell into the xSight.
 The xSight draws \SI{3}{\micro\liter} of the fluid through
 the xCell's \SI{50}{\um} deep observation volume.
-A ten-minute measurement provides us with
-characterization data for a few thousand colloidal spheres per sample.
+A ten-minute measurement provides
+\DIFdelbegin \DIFdel{us with
+}\DIFdelend characterization data for a few thousand colloidal spheres per sample.
 A typical example is presented in Fig.~\ref{fig:typicalcharacterization}.
 \DIFaddbegin \DIFadd{Each point in this plot represents the measured diameter, $d_p$,
-and refractive index, $n_p$, of a single particle.  Points are
+and refractive index, $n_p$, of a single particle, averaged over
+multiple measurements. Points are
 colored by the relative density of observations.
-This reveals a peak in the distribution at $d_p = \SI{1.5}{\um}$
+This coloring reveal a peak in the distribution at $d_p = \SI{1.5}{\um}$
 and $n_p = \num{1.495}$. The cross superimposed on the plot indicates
 the median particle diameter and median refractive index, together
 with the median absolute deviation in those properties.
 The spread in measured properties is much larger than the
-measurement uncertainty provided by xSight, and so represents
+measurement uncertainty, and so represents
 the polydispersity in the sample's actual properties.
 }\DIFaddend 
 
@@ -531,7 +552,7 @@ channel overtake slower-moving particles near
 the walls.
 Characterization data obtained from such faulty tracks
 }\DIFaddend are likely to \DIFdelbegin \DIFdel{be unreliable}\DIFdelend \DIFaddbegin \DIFadd{combine results from different particles
-rather than reflecting the properties of just one}\DIFaddend .
+rather than reflecting the properties of just one particle}\DIFaddend .
 We therefore reject any features that deviate from
 the parabolic profile by more than one median absolute deviation,
 as depicted in Fig.~\ref{fig:flow_prof}(b).
@@ -539,7 +560,7 @@ as depicted in Fig.~\ref{fig:flow_prof}(b).
 were cut.
 }\DIFaddend The remaining results are used
 to characterize the sample\DIFdelbegin \DIFdel{.
-}\DIFdelend \DIFaddbegin \DIFadd{, and are presented
+}\DIFdelend \DIFaddbegin \DIFadd{, as is the case
 in Fig.~\ref{fig:typicalcharacterization}.
 }\DIFaddend 
 
@@ -576,10 +597,11 @@ TPM emulsion droplets are \DIFaddbegin \DIFadd{fluid and so
 are }\DIFaddend not amenable to SEM analysis.
 
 \DIFaddbegin \DIFadd{The diameter of an individual sphere is obtained 
-using ImageJ by drawing a tight-fitting oval around its image;
-the average of each oval's minor and major axes provides an estimate for the associated sphere's diameter \mbox{%DIFAUXCMD
-\cite{klein2011traceable,mazzoli12}}\hspace{0pt}%DIFAUXCMD
-..
+by analyzing its image with ImageJ \mbox{%DIFAUXCMD
+\cite{schindelin2015imagej}}\hspace{0pt}%DIFAUXCMD
+, specifically by
+drawing a tight-fitting oval around its image and
+computing the average of the oval's major and minor axes.
 The distribution of sphere diameters is
 estimated by analyzing \num{50} spheres' images
 for each sample.
@@ -616,10 +638,12 @@ in their native medium at room temperature \SI{21.5}{\celsius}
 Figure~\ref{fig:abbe} shows an application
 of this technique to two similarly prepared
 samples of TPM spheres.
-\DIFdelbegin \DIFdel{Each sample was }\DIFdelend \DIFaddbegin \DIFadd{The initial number density of particles in each
+\DIFdelbegin \DIFdel{Each sample was }\DIFdelend \DIFaddbegin 
+
+\DIFadd{The initial number density of particles in each
 sample is obtained with the xSight by counting
 the particles in \mbox{%DIFAUXCMD
-\SI{2}{\micro\liter} }\hspace{0pt}%DIFAUXCMD
+\SI{3}{\micro\liter} }\hspace{0pt}%DIFAUXCMD
 of fluid.
 This approach yields particle concentrations with
 an accuracy of \mbox{%DIFAUXCMD
@@ -644,6 +668,10 @@ $n_p = \num{1.506(7)}$ with \SI{95}{\percent} confidence.
 This range includes uncertainty in the samples
 volume fractions as well as any differences between the
 two samples.
+\DIFaddbegin \DIFadd{This result demonstrates both the reproducibility of the
+synthesis and the reproducibility of this measurement
+technique.
+}\DIFaddend 
 
 This method is complementary to the approach used
 by van der Wel, \emph{et al.},
@@ -749,7 +777,11 @@ and droplet nuclei, thereby ensuring that all droplets grow under
 comparable conditions.
 Beyond simply mixing the sample, however, stirring creates shear
 forces \cite{halasz2007vortex} that can alter droplets' size
-distribution \cite{oles1992shear,eggersdorfer2010fragmentation}.
+distribution \DIFdelbegin \DIFdel{\mbox{%DIFAUXCMD
+\cite{oles1992shear,eggersdorfer2010fragmentation}}\hspace{0pt}%DIFAUXCMD
+}\DIFdelend \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\cite{oles1992shear,eggersdorfer2010fragmentation,yeung2003shear}}\hspace{0pt}%DIFAUXCMD
+}\DIFaddend .
 The overall effect of stir rate on the resulting particle size
 is best assessed experimentally.
 
@@ -1198,7 +1230,7 @@ Faster nucleation
 presumably yields more droplets and reduces the average particle size.
 At low concentrations of ammonia, 
 oligomerization proceeds more slowly
-and \DIFdelbegin \DIFdel{and }\DIFdelend yields fewer larger droplets.
+and \DIFdelbegin \DIFdel{and yields fewer }\DIFdelend \DIFaddbegin \DIFadd{yields fewer of the }\DIFaddend larger droplets.
 
 \begin{figure}
     \centering
