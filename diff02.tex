@@ -1,7 +1,7 @@
 \documentclass[journal=langd5,manuscript=article]{achemso}
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL optimizing01.tex   Sat Feb 16 07:06:35 2019
-%DIF ADD optimizing02.tex   Sat Feb 16 08:23:57 2019
+%DIF ADD optimizing02.tex   Sat Feb 16 09:32:14 2019
 
 \usepackage[version=4]{mhchem} % Formula subscripts using \ce{}
 \usepackage{chemfig}
@@ -110,22 +110,28 @@ New York University, New York, NY 10003}
 %% be automatically moved as appropriate.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{tocentry}
-% Some journals require a graphical entry for the Table of Contents.
-% This should be laid out ``print ready'' so that the sizing of the
-% text is correct.
+  %DIF <  Some journals require a graphical entry for the Table of Contents.
+%DIF <  This should be laid out ``print ready'' so that the sizing of the
+%DIF <  text is correct.
+\DIFdelbegin %DIFDELCMD < 
 
-% Inside the \texttt{tocentry} environment, the font used is Helvetica
-% 8\,pt, as required by \emph{Journal of the American Chemical
-% Society}.
+%DIFDELCMD < %%%
+%DIF <  Inside the \texttt{tocentry} environment, the font used is Helvetica
+%DIF <  8\,pt, as required by \emph{Journal of the American Chemical
+%DIF <  Society}.
+%DIFDELCMD < 
 
-% The surrounding frame is 9\,cm by 3.5\,cm, which is the maximum
-% permitted for  \emph{Journal of the American Chemical Society}
-% graphical table of content entries. The box will not resize if the
-% content is too big: instead it will overflow the edge of the box.
+%DIFDELCMD < %%%
+%DIF <  The surrounding frame is 9\,cm by 3.5\,cm, which is the maximum
+%DIF <  permitted for  \emph{Journal of the American Chemical Society}
+%DIF <  graphical table of content entries. The box will not resize if the
+%DIF <  content is too big: instead it will overflow the edge of the box.
+%DIFDELCMD < 
 
-% This box and the associated title will always be printed on a
-% separate page at the end of the document.
-  \centering
+%DIFDELCMD < %%%
+%DIF <  This box and the associated title will always be printed on a
+%DIF <  separate page at the end of the document.
+  \DIFdelend \centering
  \includegraphics[height=3.5cm]{tocgraphic}
 \end{tocentry}
 
@@ -219,14 +225,23 @@ and reproduces the observation \mbox{%DIFAUXCMD
 \cite{vanderwel17}
 }\hspace{0pt}%DIFAUXCMD
 that smaller particles form at higher pH.
+Increasing monomer concentration yields larger spheres,
+as previously noted \mbox{%DIFAUXCMD
+\cite{vanderwel17}}\hspace{0pt}%DIFAUXCMD
+, but to a lesser
+extent as pH increases.
 Holographic measurements also reveal that more vigorous
 mixing during emulsification yields larger
 particles without necessarily increasing polydispersity,
 a surprising trend that runs counter to common
 emulsion polymerization processes.
-A central point of the present study is that holographic
-characterization can provide much of the information
-needed to select among processing choices in real time
+Also surprising is the observation that the
+choice of free-radical initiator has no discernable
+effect on the final particles' properties, at least not
+in the range of particle sizes we considered.
+These observations help to make our central point that holographic
+characterization provides a rich source of information
+for choosing among synthesis options in real time
 without requiring special sample preparation.
 }\DIFaddend 
 
@@ -245,6 +260,8 @@ were purchased from Sigma Aldrich.
 Two water-soluble initiators, 
 ammonium persulfate (APS) and potassium persulfate (KPS),
 also were purchased from Sigma Aldrich.
+\DIFaddbegin \DIFadd{All reagents were used as delivered.
+}\DIFaddend 
 
 \subsection{Emulsion polymerization}
 \label{ssec:polymerization}
@@ -842,7 +859,7 @@ with their standard deviations, $\sigma_{d_{\text{p}}}$.
 \end{figure}
 
 
-\begin{table}[!h]
+\begin{table}[hb]
 \centering
 \caption{\DIFaddFL{Median size and standard deviation of TPM spheres
   measured by SEM analysis 
