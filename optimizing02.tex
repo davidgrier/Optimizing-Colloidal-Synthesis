@@ -250,7 +250,8 @@ All samples are prepared in identical \SI{12}{\milli\liter}
 glass vials to produce \SI{5}{\milli\liter} of colloidal dispersion.
 The vials are sealed to ensure consistent evaporation of ammonia
 from run to run.
-Identical stir bars are used for all syntheses to ensure consistent flow properties.
+Identical stir bars are used for all syntheses to ensure consistent
+flow properties.
 
 \subsection{Holographic particle characterization}
 \label{sec:holographicparticlecharacterization}
@@ -283,16 +284,18 @@ beam in the focal plane of the microscope's objective lens.
 The objective lens relays this interference pattern to a tube
 lens that focuses it onto the sensor of a digital video camera.
 The intensity of the recorded interference pattern is
-a hologram of the particle that can be analyzed to obtain information
+a hologram of the particle that can be analyzed \cite{lee07a}
+to obtain information
 about the particle's position and composition.
 The instrument's analytical software fits each hologram 
 to predictions of the Lorenz-Mie theory of light scattering
+\cite{bohren83,mishchenko02,gouesbet11}
 to measure the associated particle's diameter and refractive index, as well as its
 three-dimensional position relative to the center of the 
 focal plane \cite{lee07a}.
 Each particle is recorded and analyzed multiple times during its
 transit through the observation volume.
-Time-resolved observations are linked into trajectories
+These time-resolved observations are linked into trajectories
 using a maximum likelihood algorithm
 \cite{crocker1996methods}, both to map the particle's
 transit through the sample volume and also to
@@ -302,31 +305,37 @@ for improved accuracy and precision \cite{cheong2009flow}.
 Typical measurements on micrometer-scale spheres yield
 a particle's diameter with a precision of
 \SI{5}{\nm} and its refractive index to
-within a part per thousand
+within five parts per thousand
 \cite{krishnatreya14,wang2016holographic}.
 Holographic analysis also yields the particle's
 in-plane position to within a nanometer and its
 axial position to within \SI{5}{\nm}
 \cite{cheong2009flow,krishnatreya14}.
+These measurements' accuracy and precision have
+been validated with measurements on standard
+particles \cite{lee07a,wang2016holographic},
+by comparison with orthogonal techniques \cite{wang2016holographic},
+and through analysis of well-understood physical processes
+\cite{krishnatreya14}.
 
 Originally demonstrated with dispersions of model
-colloidal spheres of various compositions \cite{lee07a},
+colloidal spheres \cite{lee07a},
 holographic particle characterization has been
 applied successfully to porous particles \cite{cheong11},
 dimpled spheres \cite{hannel2015holographic},
 and fractal aggregates \cite{wang2016fractal}.
-It has been used to monitor protein aggregation 
-in biopharmaceuticals
-\cite{wang2016holographic,kasimbeg2019holographic}, 
-nanoparticle agglomeration in semiconductor polishing
-slurries \cite{cheong17} and oil droplet concentration in
-wastewater \cite{philips2017holographic}.
 Time-resolved holographic characterization has been used to
 monitor the growth of colloidal polydimethylsiloxane (PDMS)
 spheres \cite{wang15}, the response of colloidal
 sensors to changing environmental conditions
 \cite{wang2015stimulus} and molecular binding
 to the surface of functionalized beads \cite{cheong2009flow}.
+Practical applications include monitoring protein aggregation 
+in biopharmaceuticals
+\cite{wang2016holographic,kasimbeg2019holographic}, 
+nanoparticle agglomeration in semiconductor polishing
+slurries \cite{cheong17} and oil droplet concentration in
+wastewater \cite{philips2017holographic}.
 
 xSight measurements are limited to particle concentrations
 below \SI{E6}{\per\milli\liter} to minimize interference
@@ -344,13 +353,14 @@ We analyze each sample by pipetting \SI{100}{\micro\liter} of the diluted
 dispersion into an xCell microfluidic sample cell and loading the xCell into the xSight.
 The xSight draws \SI{3}{\micro\liter} of the fluid through
 the xCell's \SI{50}{\um} deep observation volume.
-A ten-minute measurement provides us with
+A ten-minute measurement provides
 characterization data for a few thousand colloidal spheres per sample.
 A typical example is presented in Fig.~\ref{fig:typicalcharacterization}.
 Each point in this plot represents the measured diameter, $d_p$,
-and refractive index, $n_p$, of a single particle.  Points are
+and refractive index, $n_p$, of a single particle, averaged over
+multiple measurements. Points are
 colored by the relative density of observations.
-This reveals a peak in the distribution at $d_p = \SI{1.5}{\um}$
+This coloring reveal a peak in the distribution at $d_p = \SI{1.5}{\um}$
 and $n_p = \num{1.495}$. The cross superimposed on the plot indicates
 the median particle diameter and median refractive index, together
 with the median absolute deviation in those properties.
@@ -410,14 +420,14 @@ channel overtake slower-moving particles near
 the walls.
 Characterization data obtained from such faulty tracks
 are likely to combine results from different particles
-rather than reflecting the properties of just one.
+rather than reflecting the properties of just one particle.
 We therefore reject any features that deviate from
 the parabolic profile by more than one median absolute deviation,
 as depicted in Fig.~\ref{fig:flow_prof}(b).
 In this case, \num{72} out of \num{6807} trajectories
 were cut.
 The remaining results are used
-to characterize the sample, and are presented
+to characterize the sample, as is the case
 in Fig.~\ref{fig:typicalcharacterization}.
 
 \subsection{Orthogonal validation methods}
@@ -453,8 +463,9 @@ TPM emulsion droplets are fluid and so
 are not amenable to SEM analysis.
 
 The diameter of an individual sphere is obtained 
-using ImageJ by drawing a tight-fitting oval around its image;
-the average of each oval's minor and major axes provides an estimate for the associated sphere's diameter \cite{klein2011traceable,mazzoli12}..
+by analyzing its image with ImageJ \cite{schindelin2015imagej}, specifically by
+drawing a tight-fitting oval around its image and
+computing the average of the oval's major and minor axes.
 The distribution of sphere diameters is
 estimated by analyzing \num{50} spheres' images
 for each sample.
@@ -488,6 +499,7 @@ in their native medium at room temperature \SI{21.5}{\celsius}
 Figure~\ref{fig:abbe} shows an application
 of this technique to two similarly prepared
 samples of TPM spheres.
+
 The initial number density of particles in each
 sample is obtained with the xSight by counting
 the particles in \SI{2}{\micro\liter} of fluid.
@@ -506,6 +518,9 @@ $n_p = \num{1.506(7)}$ with \SI{95}{\percent} confidence.
 This range includes uncertainty in the samples
 volume fractions as well as any differences between the
 two samples.
+This result demonstrates both the reproducibility of the
+synthesis and the reproducibility of this measurement
+technique.
 
 This method is complementary to the approach used
 by van der Wel, \emph{et al.},
