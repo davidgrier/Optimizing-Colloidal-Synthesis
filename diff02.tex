@@ -1,7 +1,7 @@
 \documentclass[journal=langd5,manuscript=article]{achemso}
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL optimizing01.tex   Sat Feb 16 07:06:35 2019
-%DIF ADD optimizing02.tex   Sat Feb 16 07:06:35 2019
+%DIF ADD optimizing02.tex   Sat Feb 16 08:20:51 2019
 
 \usepackage[version=4]{mhchem} % Formula subscripts using \ce{}
 \usepackage{chemfig}
@@ -136,16 +136,17 @@ individual colloidal particles dispersed in fluid media
 and rapidly amasses statistics on the distributions
 of these properties, even for complex heterogeneous dispersions.
 This information is useful for 
-analyzing and optimizing synthetic protocols.
+analyzing and optimizing \DIFdelbegin \DIFdel{synthetic protocols }\DIFdelend \DIFaddbegin \DIFadd{protocols for synthesizing
+colloidal particles}\DIFaddend .
 We illustrate how holographic characterization can guide 
 process design through a case study
 on a particularly versatile model system
-composed of micrometer-scale
-spheres, which are synthesized from the 
+composed of \DIFaddbegin \DIFadd{an aqueous dispersion of }\DIFaddend micrometer-scale
+spheres \DIFdelbegin \DIFdel{, which are }\DIFdelend synthesized from the 
 organosilane monomer 
 3-(trimethoxysilyl)propyl methacrylate
-(TPM) and dispersed in
-aqueous media.
+(TPM)\DIFdelbegin \DIFdel{and dispersed in
+aqueous media}\DIFdelend .
 \end{abstract}
 
 \section{Introduction}
@@ -197,7 +198,7 @@ expedites systematic assays and can be fast enough to provide feedback
 for process control.
 
 To illustrate the use of holographic particle characterization
-to guide process design, this work
+to guide process design, \DIFdelbegin \DIFdel{this }\DIFdelend \DIFaddbegin \DIFadd{the present }\DIFaddend work
 explores the roles of emulsion stoichiometry, initiator choice, and
 agitation conditions in the synthesis of monodisperse spheres of
 3-(trimethoxysilyl)propyl methacrylate (TPM) \cite{vanderwel17},
@@ -208,15 +209,18 @@ to identify factors that influence size selection, polydispersity
 and composition and validate the results with conventional particle
 characterization techniques.
 This study therefore builds on the work of van der Wel, \emph{et al.}
-\cite{vanderwel17},
-which \DIFdelbegin \DIFdel{relies on }\DIFdelend \DIFaddbegin \DIFadd{uses }\DIFaddend conventional techniques to systematically
-characterize the emulsion polymerization protocol for TPM spheres.
-\DIFaddbegin \DIFadd{Our holographic measurements
-independently confirm the observation \mbox{%DIFAUXCMD
+\cite{vanderwel17}, \DIFdelbegin \DIFdel{which relies on }\DIFdelend \DIFaddbegin \DIFadd{that introduced the synthesis of TPM colloids
+and deployed }\DIFaddend conventional techniques to systematically
+characterize the emulsion polymerization protocol\DIFdelbegin \DIFdel{for TPM spheres.
+}\DIFdelend \DIFaddbegin \DIFadd{.
+Our holographic measurements confirm that a straightforward
+tabletop synthesis yields exceptionally monodisperse spheres,
+and reproduces the observation \mbox{%DIFAUXCMD
 \cite{vanderwel17}
 }\hspace{0pt}%DIFAUXCMD
 that smaller particles form at higher pH.
-They also reveal that more vigorous mixing yields larger
+Holographic measurements also reveal that more vigorous
+mixing during emulsification yields larger
 particles without necessarily increasing polydispersity,
 a surprising trend that runs counter to common
 emulsion polymerization processes.
