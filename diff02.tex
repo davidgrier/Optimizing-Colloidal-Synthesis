@@ -1,7 +1,7 @@
 \documentclass[journal=langd5,manuscript=article]{achemso}
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL optimizing01.tex   Sat Feb 16 07:06:35 2019
-%DIF ADD optimizing02.tex   Sat Feb 16 11:40:19 2019
+%DIF ADD optimizing02.tex   Sat Feb 23 11:44:54 2019
 
 \usepackage[version=4]{mhchem} % Formula subscripts using \ce{}
 \usepackage{chemfig}
@@ -195,10 +195,21 @@ the design and optimization of colloidal synthesis processes
 by providing particle-resolved assays of samples' size distributions
 and compositions rapidly and with minimal sample preparation.
 Holographic characterization works equally
-well for droplets and solid particles. It naturally accommodates heterogeneous
-samples and reveals correlations between size and composition. Extensions to the technique
+well for \DIFaddbegin \DIFadd{fluid }\DIFaddend droplets and solid particles
+\DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\cite{cheong11,philips2017holographic}}\hspace{0pt}%DIFAUXCMD
+}\DIFaddend .
+It naturally accommodates heterogeneous
+samples \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\cite{lee07a,yevick2014machine}}\hspace{0pt}%DIFAUXCMD
+,
+}\DIFaddend and reveals correlations between size and composition
+\DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\cite{cheong11,wang2016fractal}}\hspace{0pt}%DIFAUXCMD
+}\DIFaddend .
+Extensions to the technique
 provide particle-resolved morphology measurements from the same underlying data.
-All of this information about a sample's properties can be acquired with a
+All of this information \DIFdelbegin \DIFdel{about a sample's properties can be acquired }\DIFdelend \DIFaddbegin \DIFadd{can be obtained }\DIFaddend with a
 single measurement in about ten minutes, which
 expedites systematic assays and can be fast enough to provide feedback
 for process control.
@@ -215,7 +226,7 @@ to identify factors that influence size selection, polydispersity
 and composition and validate the results with conventional particle
 characterization techniques.
 This study therefore builds on the work of van der Wel, \emph{et al.}
-\cite{vanderwel17}, \DIFdelbegin \DIFdel{which relies on }\DIFdelend \DIFaddbegin \DIFadd{that introduced the synthesis of TPM colloids
+\cite{vanderwel17}, which \DIFdelbegin \DIFdel{relies on }\DIFdelend \DIFaddbegin \DIFadd{introduced the synthesis of TPM colloids
 and deployed }\DIFaddend conventional techniques to systematically
 characterize the emulsion polymerization protocol\DIFdelbegin \DIFdel{for TPM spheres.
 }\DIFdelend \DIFaddbegin \DIFadd{.
@@ -225,15 +236,13 @@ and reproduces the observation \mbox{%DIFAUXCMD
 \cite{vanderwel17}
 }\hspace{0pt}%DIFAUXCMD
 that smaller particles form at higher pH.
-Increasing monomer concentration yields larger spheres,
-as previously noted \mbox{%DIFAUXCMD
-\cite{vanderwel17}}\hspace{0pt}%DIFAUXCMD
-, but to a lesser
-extent as pH increases.
-Holographic measurements also reveal that more vigorous
+Holographic analysis also confirms that increasing
+monomer concentration tends to form larger spheres,
+but reveals that this enhancement decreases as pH increases.
+Holographic particle characterization also reveals that more vigorous
 mixing during emulsification yields larger
-particles without necessarily increasing polydispersity,
-a surprising trend that runs counter to common
+particles without necessarily increasing polydispersity.
+This surprising observation runs counter to the usual trend in
 emulsion polymerization processes.
 Also surprising is the observation that the
 choice of free-radical initiator has no discernable
@@ -301,14 +310,20 @@ Hydrolyzed monomers then condense into dimers,
     \chemfig{HO-Si(-[2]R)(-[6]OH)-O-Si(-[2]R)(-[6]OH)-OH}
     + H2O},
 \end{equation}
-and higher-order branched silsesquioxanes functionalized
-with propyl methacrylate groups that are insoluble in water and
-coalesce homogeneously into monodisperse droplets.
-These nuclei continue to grow in a well-mixed environment until
+and higher-order branched silsesquioxanes\DIFaddbegin \DIFadd{.
+These oligomers are }\DIFaddend functionalized
+with propyl methacrylate groups \DIFdelbegin \DIFdel{that }\DIFdelend \DIFaddbegin \DIFadd{and so }\DIFaddend are insoluble in water\DIFdelbegin \DIFdel{and
+}\DIFdelend \DIFaddbegin \DIFadd{.
+They therefore }\DIFaddend coalesce homogeneously into monodisperse droplets\DIFdelbegin \DIFdel{.
+These nuclei }\DIFdelend \DIFaddbegin \DIFadd{,
+which }\DIFaddend continue to grow in a well-mixed environment until
 the hydrolyzed monomer is depleted.
-At this point, the droplets still are fluid
-but are largely stable against coarsening,
-because of surface charging \cite{vanderwel17}.
+\DIFaddbegin 
+
+\DIFaddend At this point, the droplets still are fluid\DIFaddbegin \DIFadd{,
+}\DIFaddend but are largely stable against coarsening
+\DIFdelbegin \DIFdel{,
+}\DIFdelend because of surface charging \cite{vanderwel17}.
 They can be transformed into solid spheres by warming
 the emulsion to \SI{80}{\degreeCelsius} and adding 
 a heat-activated free radical initiator
@@ -321,6 +336,9 @@ The vials are sealed to ensure consistent evaporation of ammonia
 from run to run.
 Identical stir bars are used for all syntheses to ensure consistent
 flow properties.
+\DIFaddbegin \DIFadd{Each synthesis is repeated at least once, and characterization data
+compared to ensure consistent results.
+}\DIFaddend 
 
 \subsection{Holographic particle characterization}
 \label{sec:holographicparticlecharacterization}
@@ -348,7 +366,7 @@ We perform holographic characterization measurements with a Spheryx xSight,
 a commercial holographic particle characterization system.
 The xSight draws a small sample of colloidal suspension through the
 observation volume of an in-line holographic microscope where it is illuminated
-with a laser operating at a vacuum wavelength of \SI{532}{\nm}.
+\DIFdelbegin \DIFdel{with }\DIFdelend \DIFaddbegin \DIFadd{by }\DIFaddend a laser operating at a vacuum wavelength of \SI{532}{\nm}.
 Light scattered by a colloidal particle interferes with the rest of the
 beam in the focal plane of the microscope's objective lens.
 The objective lens relays this interference pattern to a tube
@@ -512,7 +530,7 @@ represents the \DIFdelbegin \DIFdel{measured }\DIFdelend speed, $v_p(z_p)$, for 
 particle's transit at its mean axial position, $z_p$\DIFdelbegin \DIFdel{,
 averaged over
 its trajectory through the observation volume.
-}\DIFdelend \DIFaddbegin \DIFadd{.
+The solid }\DIFdelend \DIFaddbegin \DIFadd{.
 The width of the observed distribution of transit speeds
 is dominated by variations in the pump speed over
 the \mbox{%DIFAUXCMD
@@ -524,7 +542,7 @@ the flow speed is always low enough to avoid artifacts
 due to motion blurring \mbox{%DIFAUXCMD
 \cite{cheong2009flow,dixon2011holographic}}\hspace{0pt}%DIFAUXCMD
 .
-}\DIFaddend The solid curve in Fig.~\ref{fig:flow_prof}(b) is a fit to a
+The dashed }\DIFaddend curve in Fig.~\ref{fig:flow_prof}(\DIFdelbegin \DIFdel{b}\DIFdelend \DIFaddbegin \DIFadd{a}\DIFaddend ) is a fit to a
 \DIFdelbegin \DIFdel{parabola}\DIFdelend \DIFaddbegin \DIFadd{the expected parabolic flow profile}\DIFaddend . 
 Extrapolating this fit to \DIFdelbegin \DIFdel{$v(z)=0$ }\DIFdelend \DIFaddbegin \DIFadd{$v(z) = 0$ }\DIFaddend yields estimates
 for the axial positions of the channel's walls, assuming
@@ -574,7 +592,9 @@ orthogonal measurement techniques.
 Specifically, we use scanning electron microscopy to provide baseline estimates for the
 particles' diameters and Abbe refractometry to measure their refractive indexes.
 
-\begin{figure}
+\DIFaddbegin \subsubsection{\DIFadd{Scanning electron microscopy}}
+
+\DIFaddend \begin{figure}
   \centering
   \includegraphics[width=0.5\textwidth]{semimages03}
   \caption{SEM images of polymerized TPM spheres
@@ -606,6 +626,8 @@ The distribution of sphere diameters is
 estimated by analyzing \num{50} spheres' images
 for each sample.
 }
+
+\subsubsection{\DIFadd{Abbe refractometry}}
 
 \DIFaddend \begin{figure}
   \centering
@@ -698,7 +720,7 @@ These factors determine the nucleation rate of oligomer
 droplets, the rate and duration of growth, 
 and the homogeneity of these processes, respectively.
 
-The choice of free-radical initiator should not affect
+The choice of free-radical initiator \DIFdelbegin \DIFdel{should }\DIFdelend \DIFaddbegin \DIFadd{does }\DIFaddend not affect
 the size distribution of the oligomer droplets, but
 may influence the course of polymerization, and thus
 the density and size of the final spheres.
@@ -734,44 +756,22 @@ a comprehensive view of the joint
 distribution of the sizes and refractive
 indexes of the particle in the sample.
 Orthogonal techniques yield information
-about the size distribution or about
+about the \DIFdelbegin \DIFdel{size distribution or about
 the refractive index distribution separately.
 We therefore use these techniques to validate
-size data and composition data independently.
+size data and compositiondata independently}\DIFdelend \DIFaddbegin \DIFadd{particles' size distribution and
+refractive index separately}\DIFaddend .
+\DIFaddbegin \DIFadd{They cannot identify correlations between
+size and composition.
+We therefore average holographic characterization
+data over the complementary characteristic when
+comparing with orthogonal techniques.
+}\DIFaddend 
 
 \subsection{Effect of stirring rate on particle size}
 \label{sec:stir}
 
-\DIFdelbegin %DIFDELCMD < \begin{figure}[!t]
-%DIFDELCMD <   \centering
-%DIFDELCMD <   \includegraphics[width=0.5\textwidth]{sizedistributions03}
-%DIFDELCMD <   %%%
-%DIFDELCMD < \caption{%
-{%DIFAUXCMD
-\DIFdelFL{Probability distribution function (PDF) for 
-    sphere diameters as measured by
-    holographic particle characterization (HPC) and by SEM for
-    samples that were stirred at 
-    \num{500} (blue), 
-    \num{700} (yellow), 
-    \num{900} (green), 
-    and \mbox{%DIFAUXCMD
-\SI{1100}{\per\minute} }\hspace{0pt}%DIFAUXCMD
-(red).
-    HPC results are projections of joint
-    distributions such as the example in
-    Fig.~\ref{fig:typicalcharacterization}
-    and each summarize several thousand single-particle measurements.
-    Histograms of SEM results were compiled from
-    images of dried samples such as the
-    examples in Fig.~\ref{fig:semimages}.}}
-  %DIFAUXCMD
-%DIFDELCMD < \label{fig:sizedistribution}
-%DIFDELCMD < \end{figure}
-%DIFDELCMD < 
-
-%DIFDELCMD < %%%
-\DIFdelend Stirring the sample while the oligomers condense into droplets promotes
+Stirring the sample while the oligomers condense into droplets promotes
 homogeneous nucleation by uniformly dispersing the hydrolyzed monomer
 and droplet nuclei, thereby ensuring that all droplets grow under
 comparable conditions.
@@ -792,7 +792,11 @@ The four emulsions represented in this plot
 were produced in identical cylindrical 
 vials with identical stir bars. 
 Each vial was charged with
-\SI{15}{\micro\liter} of \SI{29}{\percent} ammonia 
+\DIFdelbegin \DIFdel{\mbox{%DIFAUXCMD
+\SI{15}{\micro\liter} }\hspace{0pt}%DIFAUXCMD
+}\DIFdelend \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\SI{15.0(3)}{\micro\liter} }\hspace{0pt}%DIFAUXCMD
+}\DIFaddend of \SI{29}{\percent} ammonia 
 (\SI{29.3}{\percent} \ce{NH3}(aq) by \ce{HCl} titration) 
 \DIFaddbegin \DIFadd{using an Eppendorf Research plus pipette, }\DIFaddend followed by
 \SI{200}{\micro\liter} of TPM monomer and was immediately
@@ -816,20 +820,26 @@ cylindrical vials
 have an inner diameter of \SI{16}{\milli\meter} and a height of \SI{60}{\milli\meter}.
 Each \SI{5}{\milli\liter} sample filled approximately one third of the cylinder's volume.
 Each pill-shaped magnetic stir rod has a long axis length of \SI{12}{\milli\meter} 
-and short axis length of \SI{7}{\milli\meter}. The dimensionless impeller Reynolds number
-distinguishes turbulent and laminar flows and is given as
-\begin{equation}
+and short axis length of \SI{7}{\milli\meter}.
+The \DIFaddbegin \DIFadd{nature of the flow in the vial can be gauged with
+the }\DIFaddend dimensionless impeller Reynolds number\DIFdelbegin \DIFdel{distinguishes turbulent and laminar flows and is given as
+}\DIFdelend \DIFaddbegin \DIFadd{,
+}\DIFaddend \begin{equation}
     N_{Re} = \frac{\Omega d^2 \rho}{\mu},
 \end{equation}
 where $\Omega$ is the rotation speed in rotations per second, 
 $d$ is the impeller diameter, and $\rho$ and $\mu$ refer to the
 density and dynamic viscosity of water, respectively.
-Therefore the impeller Reynolds number varies from
+\DIFdelbegin \DIFdel{Therefore }\DIFdelend \DIFaddbegin \DIFadd{The transition from laminar flow to turbulent flow occurs for
+$N_{Re} > \num{1000}$.
+In our system, }\DIFaddend the impeller Reynolds number \DIFdelbegin \DIFdel{varies }\DIFdelend \DIFaddbegin \DIFadd{ranges }\DIFaddend from
 \num{3200} at a stir rate of \SI{500}{\per\minute}
-to \num{7000} at \SI{1100}{\per\minute}.
-This means that the tangential flow is turbulent over the entire 
-range \cite{halasz2007vortex}.
-\DIFaddbegin \DIFadd{The meniscus of the driven vortex ranges in depth
+to \num{7000} at \SI{1100}{\per\minute}\DIFdelbegin \DIFdel{.
+This means that the tangential flow is turbulent }\DIFdelend \DIFaddbegin \DIFadd{,
+and so is turbulent \mbox{%DIFAUXCMD
+\cite{halasz2007vortex}}\hspace{0pt}%DIFAUXCMD
+.
+The meniscus of the driven vortex ranges in depth
 from \mbox{%DIFAUXCMD
 \SI{5}{\mm} }\hspace{0pt}%DIFAUXCMD
 at \mbox{%DIFAUXCMD
@@ -843,9 +853,12 @@ at \mbox{%DIFAUXCMD
 the stir bar until \mbox{%DIFAUXCMD
 \SI{2000}{\per\minute}}\hspace{0pt}%DIFAUXCMD
 .
-Flow conditions therefore should be comparable over the
-entire range of stirring rates considered.
-}\DIFaddend 
+These considerations suggest that samples should be
+well mixed }\DIFaddend over the entire range \DIFdelbegin \DIFdel{\mbox{%DIFAUXCMD
+\cite{halasz2007vortex}}\hspace{0pt}%DIFAUXCMD
+}\DIFdelend \DIFaddbegin \DIFadd{of stirring rates,
+the principal difference among them being the intensity of the shear forces
+encountered by the dispersed droplets}\DIFaddend .
 
 The results in Fig.~\ref{fig:sizedistribution}
 reveal that the smallest mean particle size is
@@ -867,7 +880,20 @@ collision-induced droplet coalescence in this system
 are reported in Table~\ref{table:sem_data} together
 with their standard deviations, $\sigma_{d_{\text{p}}}$.
 
-\DIFaddbegin \begin{figure}[!t]
+\DIFdelbegin \DIFdel{Size distributions obtained holographically are consistent with results 
+of SEM analysis on the same samples, including
+the images in Fig.~\ref{fig:semimages}.
+The mean sphere diameter is estimated by analyzing \num{50} spheres' images using ImageJ \mbox{%DIFAUXCMD
+\cite{mazzoli12}}\hspace{0pt}%DIFAUXCMD
+. %DIF <  Find better citation?
+The diameter of an individual sphere is obtained 
+drawing a tight-fitting oval around its image;
+the average of each oval's minor and major axes provides an estimate for the
+associated sphere's diameter.
+The resulting histograms of particle diameters
+also are plotted in Fig.~\ref{fig:sizedistribution}.
+}\DIFdelend
+\begin{figure}[!t]
   \centering
   \includegraphics[width=0.5\textwidth]{sizedistributions03}
   \caption{\DIFaddFL{Probability distribution function (PDF) for 
@@ -891,39 +917,41 @@ with their standard deviations, $\sigma_{d_{\text{p}}}$.
 \end{figure}
 
 
-\begin{table}[hb]
-\centering
-\caption{\DIFaddFL{Median size and standard deviation of TPM spheres
+\DIFdelbegin \DIFdel{Based on the outcome of this survey, we synthesize
+the remainder of the particles in this study
+at a stirring rate of \mbox{%DIFAUXCMD
+\SI{700}{\per\minute}}\hspace{0pt}%DIFAUXCMD
+,
+which yields particles with the smallest
+relative polydispersity.
+}%DIFDELCMD < 
+
+%DIFDELCMD < \begin{table}[!t]
+%DIFDELCMD < %%%
+\DIFdelendFL \DIFaddbeginFL \begin{table}[hb]
+\DIFaddendFL \centering
+\caption{Median size and standard deviation of TPM spheres
   measured by SEM analysis 
-  and holographically for each of the four stir rates.}}
+  and holographically for each of the four stir rates.}
 \begin{tabular}{rrrrr}
 \hline
 \hline
-\DIFaddFL{$\Omega~[\si{\per\minute}]$ }& \DIFaddFL{\num{500} }& \DIFaddFL{\num{700}}& \DIFaddFL{\num{900} }& \DIFaddFL{\num{1100} }\\
+$\Omega~[\si{\per\minute}]$ & \num{500} & \num{700}& \num{900} & \num{1100} \\
 \hline
-\DIFaddFL{$\avg{d_p}_{\text{SEM}}~[\si{\um}]$ }& \DIFaddFL{1.45 }& \DIFaddFL{1.56 }& \DIFaddFL{1.92 }& \DIFaddFL{1.75 }\\ 
-\DIFaddFL{$\sigma_{d_p, \text{SEM}}~[\si{\um}]$ }& \DIFaddFL{0.12 }& \DIFaddFL{0.13 }& \DIFaddFL{0.28 }& \DIFaddFL{0.32 }\\ 
-\DIFaddFL{$\avg{d_p}_{\text{HPC}}~[\si{\um}]$ }& \DIFaddFL{1.43 }& \DIFaddFL{1.54 }& \DIFaddFL{1.88 }& \DIFaddFL{1.73 }\\ 
-\DIFaddFL{$\sigma_{d_p, \text{HPC}}~[\si{\um}]$ }& \DIFaddFL{0.04 }& \DIFaddFL{0.05 }& \DIFaddFL{0.06 }& \DIFaddFL{0.08 }\\ 
+$\avg{d_p}_{\text{SEM}}~[\si{\um}]$ & 1.45 & 1.56 & 1.92 & 1.75 \\ 
+$\sigma_{d_p, \text{SEM}}~[\si{\um}]$ & 0.12 & 0.13 & 0.28 & 0.32 \\ 
+$\avg{d_p}_{\text{HPC}}~[\si{\um}]$ & 1.43 & 1.54 & 1.88 & 1.73 \\ 
+$\sigma_{d_p, \text{HPC}}~[\si{\um}]$ & 0.04 & 0.05 & 0.06 & 0.08 \\ 
 \hline \hline
 \end{tabular}
 \label{table:sem_data}
 \end{table}
 
-\DIFaddend Size distributions obtained holographically are consistent with results of SEM analysis on the same samples, including
+\DIFaddbegin \DIFadd{Size distributions obtained holographically are consistent with results of SEM analysis on the same samples, including
 the images in Fig.~\ref{fig:semimages}.
-\DIFdelbegin \DIFdel{The mean sphere diameter is estimated by analyzing \num{50} spheres' images using ImageJ \mbox{%DIFAUXCMD
-\cite{mazzoli12}}\hspace{0pt}%DIFAUXCMD
-. %DIF <  Find better citation?
-The diameter of an individual sphere is obtained 
-drawing a tight-fitting oval around its image;
-the average of each oval's minor and major axes provides an estimate for the
-associated sphere's diameter.
-The resulting histograms of particle diameters
-}\DIFdelend \DIFaddbegin \DIFadd{These results
-}\DIFaddend also are plotted in Fig.~\ref{fig:sizedistribution}
-\DIFdelbegin \DIFdel{.
-}\DIFdelend \DIFaddbegin \DIFadd{and reported in Table~\ref{table:sem_data}.
+These results
+also are plotted in Fig.~\ref{fig:sizedistribution}
+and reported in Table~\ref{table:sem_data}.
 For all samples, the median particle diameter
 obtained holographically agrees with the median
 SEM result to within \mbox{%DIFAUXCMD
@@ -932,65 +960,9 @@ SEM result to within \mbox{%DIFAUXCMD
 than the sample standard deviation.
 This agreement supports our use of HPC for rapid
 sample characterization.
-}\DIFaddend 
+}
 
-Based on the outcome of this survey, we synthesize
-the remainder of the particles in this study
-at a stirring rate of \SI{700}{\per\minute},
-which yields particles with the smallest
-relative polydispersity.
-
-\DIFdelbegin %DIFDELCMD < \begin{table}[!t]
-%DIFDELCMD < \centering
-%DIFDELCMD < %%%
-%DIFDELCMD < \caption{%
-{%DIFAUXCMD
-\DIFdelFL{Median size and standard deviation of TPM spheres
-  measured by SEM analysis 
-  and holographically for each of the four stir rates.}}
-%DIFAUXCMD
-%DIFDELCMD < \begin{tabular}{rrrrr}
-%DIFDELCMD < \hline
-%DIFDELCMD < \hline
-%DIFDELCMD < %%%
-\DIFdelFL{$\Omega~[\si{\per\minute}]$ }%DIFDELCMD < & %%%
-\DIFdelFL{\num{500} }%DIFDELCMD < & %%%
-\DIFdelFL{\num{700}}%DIFDELCMD < & %%%
-\DIFdelFL{\num{900} }%DIFDELCMD < & %%%
-\DIFdelFL{\num{1100} }%DIFDELCMD < \\
-%DIFDELCMD < \hline
-%DIFDELCMD < %%%
-\DIFdelFL{$\avg{d_p}_{\text{SEM}}~[\si{\um}]$ }%DIFDELCMD < & %%%
-\DIFdelFL{1.45 }%DIFDELCMD < & %%%
-\DIFdelFL{1.56 }%DIFDELCMD < & %%%
-\DIFdelFL{1.92 }%DIFDELCMD < & %%%
-\DIFdelFL{1.75 }%DIFDELCMD < \\ 
-%DIFDELCMD < %%%
-\DIFdelFL{$\sigma_{d_p, \text{SEM}}~[\si{\um}]$ }%DIFDELCMD < & %%%
-\DIFdelFL{0.12 }%DIFDELCMD < & %%%
-\DIFdelFL{0.13 }%DIFDELCMD < & %%%
-\DIFdelFL{0.28 }%DIFDELCMD < & %%%
-\DIFdelFL{0.32 }%DIFDELCMD < \\ 
-%DIFDELCMD < %%%
-\DIFdelFL{$\avg{d_p}_{\text{HPC}}~[\si{\um}]$ }%DIFDELCMD < & %%%
-\DIFdelFL{1.43 }%DIFDELCMD < & %%%
-\DIFdelFL{1.54 }%DIFDELCMD < & %%%
-\DIFdelFL{1.88 }%DIFDELCMD < & %%%
-\DIFdelFL{1.73 }%DIFDELCMD < \\ 
-%DIFDELCMD < %%%
-\DIFdelFL{$\sigma_{d_p, \text{HPC}}~[\si{\um}]$ }%DIFDELCMD < & %%%
-\DIFdelFL{0.04 }%DIFDELCMD < & %%%
-\DIFdelFL{0.05 }%DIFDELCMD < & %%%
-\DIFdelFL{0.06 }%DIFDELCMD < & %%%
-\DIFdelFL{0.08 }%DIFDELCMD < \\ 
-%DIFDELCMD < \hline \hline
-%DIFDELCMD < \end{tabular}
-%DIFDELCMD < \label{table:sem_data}
-%DIFDELCMD < \end{table}
-%DIFDELCMD < 
-
-%DIFDELCMD < %%%
-\DIFdelend Although unpolymerized droplets are not amenable to SEM analysis,
+\DIFaddend Although unpolymerized droplets are not amenable to SEM analysis,
 they can be by analyzed holographically.
 Figure~\ref{fig:jointspeed} presents the median size and refractive index
 of TPM emulsion droplets prepared at the four stirring rates,
@@ -1000,7 +972,18 @@ consistent with the \SI{2}{\percent} reduction in size reported by
 van der Wel, \emph{et al.}
 based on dynamic light scattering \cite{vanderwel17}.
 
-\subsection{Effect of stirring rate on refractive index}
+\DIFaddbegin \DIFadd{Based on the outcome of this survey, we synthesize
+the remainder of the particles in this study
+at a stirring rate of \mbox{%DIFAUXCMD
+\SI{700}{\per\minute}}\hspace{0pt}%DIFAUXCMD
+,
+which reproducibly yields particles with
+\mbox{%DIFAUXCMD
+\SI{3}{\percent} }\hspace{0pt}%DIFAUXCMD
+relative polydispersity in diameter.
+}
+
+\DIFaddend \subsection{Effect of stirring rate on refractive index}
 \label{sec:stirindex}
 
 \begin{figure}
@@ -1022,26 +1005,31 @@ based on dynamic light scattering \cite{vanderwel17}.
 
 Figure~\ref{fig:jointspeed} summarizes holographic characterization
 results for the influence of stirring rate on the properties of TPM
-emulsions and their associated polymerized dispersion.
-Each dot represents the median size and refractive index for the associated sample.
+emulsions and their associated polymerized \DIFdelbegin \DIFdel{dispersion}\DIFdelend \DIFaddbegin \DIFadd{spheres}\DIFaddend .
+Each dot represents the median size and refractive index for \DIFdelbegin \DIFdel{the associated }\DIFdelend \DIFaddbegin \DIFadd{one }\DIFaddend sample.
 Error bars represent the median absolute deviations of those properties.
 
 Whereas stirring has a substantial influence on droplet size,
-its effect on refractive index is slight at most.
+its effect on refractive index is slight\DIFdelbegin \DIFdel{at most}\DIFdelend .
 This is reasonable because the refractive index reflects
 the composition of the condensed phase, which should not
-be substantially influenced by local flow conditions.
-The polymerized spheres have an average refractive index of
-$n_p = \num{1.501(9)}$, which is consistent with conventional
+\DIFdelbegin \DIFdel{be substantially influenced by }\DIFdelend \DIFaddbegin \DIFadd{vary substantially with }\DIFaddend local flow conditions.
+\DIFdelbegin \DIFdel{The polymerized }\DIFdelend \DIFaddbegin \DIFadd{Polymerized }\DIFaddend spheres have an average refractive index of
+$n_p = \num{1.501(9)}$, which is consistent with \DIFdelbegin \DIFdel{conventional
 refractometry.
-The unpolymerized emulsion droplets have a systematically 
-lower refractive index.
-Polymerization changes the chemical makeup of the droplet and
-generally increases the density % FIXME: Add citation.
-and so might reasonably account for the observed change in refractive index.
+The unpolymerized }\DIFdelend \DIFaddbegin \DIFadd{the value
+obtained by Abbe refractometry.
+}
 
-The refractive indexes of TPM droplets and polymerized spheres both
-substantially exceed that of bulk TPM oil, which is indicated by
+\DIFadd{Unpolymerized }\DIFaddend emulsion droplets have a systematically 
+lower refractive index \DIFdelbegin \DIFdel{.
+}\DIFdelend \DIFaddbegin \DIFadd{than polymerized spheres
+}\DIFaddend Polymerization changes the chemical makeup of the droplet and
+generally increases the density\DIFaddbegin \DIFadd{. }\DIFaddend % FIXME: Add citation.
+\DIFdelbegin \DIFdel{and so }\DIFdelend \DIFaddbegin \DIFadd{Both effects }\DIFaddend might reasonably account for the observed change in refractive index.
+
+\DIFdelbegin \DIFdel{The refractive indexes of }\DIFdelend \DIFaddbegin \DIFadd{Oligomerized }\DIFaddend TPM droplets and polymerized spheres both
+\DIFdelbegin \DIFdel{substantially exceed that of }\DIFdelend \DIFaddbegin \DIFadd{have higher refractive indexes than }\DIFaddend bulk TPM oil, which is indicated by
 a dashed line in Fig.~\ref{fig:jointspeed}.
 Hydrolysis and oligomerization account for a refractive
 index shift of roughly \num{0.05} and polymerization accounts for the remaining
@@ -1050,23 +1038,30 @@ increase of \num{0.02}.
 \subsection{Monitoring polymerization}
 \label{sec:monitoring}
 
-The small but clearly resolved 
-change in droplet size and refractive index can be
+The \DIFdelbegin \DIFdel{small but clearly resolved 
+change in }\DIFdelend \DIFaddbegin \DIFadd{data in Fig.~\ref{fig:heat_size_time}
+illustrate how changes in }\DIFaddend droplet size and refractive index can be
 used to monitor the progress of polymerization.
 This is useful both for ensuring that polymerization has run
 to completion before analysis, and also for minimizing the
 time required for combinatorial studies of processing choices.
+\DIFdelbegin %DIFDELCMD < 
 
-Figure~\ref{fig:heat_size_time} illustrates how
+%DIFDELCMD < %%%
+\DIFdel{Figure~\ref{fig:heat_size_time} illustrates how
 holographic characterization can be used to monitor
-droplet polymerization.  This sample
-consists of an emulsion of TPM droplets and 
-the initiator AIBN.
+droplet polymerization.  }\DIFdelend This sample consists of an emulsion of TPM droplets \DIFdelbegin \DIFdel{and 
+the initiatorAIBN}\DIFdelend \DIFaddbegin \DIFadd{undergoing
+polymerization with AIBN as the initiator}\DIFaddend .
 The suspension is continuously stirred at 
 \SI{1100}{\per\minute}
 and is thermally coupled to a heat bath set at \SI{80}{\degreeCelsius}.
 Starting when the initiator is added,
-we draw \SI{1}{\ul} of the suspension after 
+we draw \DIFdelbegin \DIFdel{\mbox{%DIFAUXCMD
+\SI{1}{\ul} }\hspace{0pt}%DIFAUXCMD
+}\DIFdelend \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\SI{1}{\micro\liter} }\hspace{0pt}%DIFAUXCMD
+}\DIFaddend of the suspension after 
 \num{5}, \num{10}, \num{15},
 \num{20}, \num{40}, \SI{60}{\minute}.
 Each aliquot is added immediately 
@@ -1092,7 +1087,7 @@ The median diameter of the TPM droplets plotted
 in Fig.~\ref{fig:heat_size_time}(a)
 decreases by \SI{2}{\percent} on average
 during polymerization.
-Although this is well within the
+Although this is \DIFdelbegin \DIFdel{well }\DIFdelend within the
 measured polydispersity of each sample, 
 it is consistent with the \SI{7}{\percent} reduction
 in volume reported in Ref.~[{\hspace*{-1ex}\citenum{vanderwel17}}].
@@ -1100,19 +1095,54 @@ The change in size is correlated with
 a simultaneous increase in the refractive index
 from \num{1.485} to \num{1.495} that is
 plotted in Fig.~\ref{fig:heat_size_time}(b).
+\DIFdelbegin %DIFDELCMD < 
 
-Dashed curves in Fig.~\ref{fig:heat_size_time}
+%DIFDELCMD < %%%
+\DIFdelend Dashed curves in Fig.~\ref{fig:heat_size_time}
 are exponentials with a \SI{10}{\minute} characteristic
 time that are superimposed on the data as a guide
 to the eye.
 Changes in dispersion properties have largely run
 their course in \SI{20}{\minute}.
-All four initiators are active for this period with
-half-lives at \SI{80}{\degreeCelsius} of \SI{1.8}{\hour}
-(APS\cite{borisov2015kinetic}),
-\SI{2}{\hour} (KPS\cite{beylerian2002kinetics}), 
-\SI{6}{\hour} (AIBN) and \SI{30}{\hour}
-(ACHN).
+\DIFdelbegin \DIFdel{All four initiators are active for this period with
+}\DIFdelend \DIFaddbegin 
+
+\DIFadd{All four free-radical initiators have }\DIFaddend half-lives
+at \SI{80}{\degreeCelsius} \DIFdelbegin \DIFdel{of \mbox{%DIFAUXCMD
+\SI{1.8}{\hour}
+}\hspace{0pt}%DIFAUXCMD
+(APS\mbox{%DIFAUXCMD
+\cite{borisov2015kinetic}}\hspace{0pt}%DIFAUXCMD
+),
+\mbox{%DIFAUXCMD
+\SI{2}{\hour} }\hspace{0pt}%DIFAUXCMD
+(KPS \mbox{%DIFAUXCMD
+\cite{beylerian2002kinetics}}\hspace{0pt}%DIFAUXCMD
+),
+\mbox{%DIFAUXCMD
+\SI{6}{\hour} }\hspace{0pt}%DIFAUXCMD
+(AIBN ) and \mbox{%DIFAUXCMD
+\SI{30}{\hour}
+}\hspace{0pt}%DIFAUXCMD
+(ACHN )}\DIFdelend \DIFaddbegin \DIFadd{that are substantially longer
+than the time required to polymerize the droplets.
+The shortest-lived initiator is APS, with a half-life
+of \mbox{%DIFAUXCMD
+\SI{1.8}{\hour} }\hspace{0pt}%DIFAUXCMD
+\mbox{%DIFAUXCMD
+\cite{borisov2015kinetic}}\hspace{0pt}%DIFAUXCMD
+.
+KPS has a half-life of \mbox{%DIFAUXCMD
+\SI{2}{\hour} }\hspace{0pt}%DIFAUXCMD
+\mbox{%DIFAUXCMD
+\cite{beylerian2002kinetics}}\hspace{0pt}%DIFAUXCMD
+,
+AIBN has a half-life of
+\mbox{%DIFAUXCMD
+\SI{6}{\hour} }\hspace{0pt}%DIFAUXCMD
+and ACHN has a half-life of \mbox{%DIFAUXCMD
+\SI{30}{\hour}}\hspace{0pt}%DIFAUXCMD
+}\DIFaddend .
 The results in Fig.~\ref{fig:heat_size_time} therefore
 suggest that heating for more than half an hour
 will not substantially alter these particles'
@@ -1135,8 +1165,8 @@ TPM oil in solution influences both
 the number of droplets that nucleate and
 the size to which they grow.
 The outcome also depends on the pH of the solution,
-influences the rate of oligomerization and should
-influence the droplets' polydispersity.
+\DIFaddbegin \DIFadd{which }\DIFaddend influences the rate of oligomerization\DIFdelbegin \DIFdel{and should
+influence the droplets' polydispersity}\DIFdelend .
 To identify conditions that minimize polydispersity,
 we prepare four batches of droplets
 corresponding to binary choices in the
@@ -1208,9 +1238,15 @@ of the data that emphasizes the influence of
 ammonia concentration. 
 All eight assays convey the same message:
 increasing ammonia concentration
-decreases the average particle diameter.
-Increased ammonia increases surface charge, 
-which promotes nucleated particle stability \cite{vanderwel17}. 
+decreases the average particle diameter\DIFdelbegin \DIFdel{.
+Increased ammonia }\DIFdelend \DIFaddbegin \DIFadd{, presumably because
+increasing pH }\DIFaddend increases surface charge \DIFdelbegin \DIFdel{, 
+which promotes nucleated particle stability \mbox{%DIFAUXCMD
+\cite{vanderwel17}}\hspace{0pt}%DIFAUXCMD
+}\DIFdelend \DIFaddbegin \DIFadd{and so
+promotes stability of nucleated particles \mbox{%DIFAUXCMD
+\cite{vanderwel17,yeung2003shear}}\hspace{0pt}%DIFAUXCMD
+}\DIFaddend . 
 This, in turn, favors higher particle number density 
 and smaller particle size for a given amount of TPM monomer.
 Increasing the number and stability of nuclei 
@@ -1219,7 +1255,7 @@ of the particle radius by reducing sensitivity to the amount
 of TPM.
 
 Choice of initiator has no appreciable 
-influence on the finished particles'
+influence on the \DIFdelbegin \DIFdel{finished }\DIFdelend \DIFaddbegin \DIFadd{polymerized }\DIFaddend particles'
 average diameter.
 Size selection is predominantly 
 determined by nucleation and growth of
@@ -1250,7 +1286,10 @@ Dimpling is believed to result from
 surface hardening followed by
 ejection of low-molecular-weight oligomers \cite{sacanna11}.
 Smaller TPM spheres polymerized with these
-initiators do not form dimples and so might 
+initiators do not form dimples \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\cite{vanderwel17}
+}\hspace{0pt}%DIFAUXCMD
+}\DIFaddend and so might 
 be expected to have nonuniform densities
 with possible signatures in the measured refractive
 index.  In fact, no significant differences are observed.
@@ -1301,7 +1340,7 @@ synthesis protocols.
 the National Science Foundation through Award Number DMR-1420073.
 Additional support was provided by the SBIR program of the
 National Science Foundation through Award Number IPP-1519057, and in part by
-NASA under grant award NNX13AR67G.
+NASA under \DIFdelbegin \DIFdel{grant award }\DIFdelend \DIFaddbegin \DIFadd{Award Number }\DIFaddend NNX13AR67G.
 The Spheryx xSight holographic characterization instrument
 used in this study was acquired by the NYU MRSEC as a shared
 instrument.
