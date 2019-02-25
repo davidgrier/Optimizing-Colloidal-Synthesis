@@ -1,7 +1,7 @@
 \documentclass[journal=langd5,manuscript=article]{achemso}
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL optimizing01.tex   Sat Feb 16 07:06:35 2019
-%DIF ADD optimizing02.tex   Sat Feb 23 12:43:41 2019
+%DIF ADD optimizing02.tex   Mon Feb 25 07:14:58 2019
 
 \usepackage[version=4]{mhchem} % Formula subscripts using \ce{}
 \usepackage{chemfig}
@@ -878,7 +878,7 @@ polydispersity, particularly increasing the proportion of undersized particles.
 \DIFaddbegin \DIFadd{It is possible that increasing shear rate favors 
 collision-induced droplet coalescence in this system
 \mbox{%DIFAUXCMD
-\cite{yeung2003shear}}\hspace{0pt}%DIFAUXCMD
+\cite{yeung2003shear,esmaeili2012stability,lin2014small}}\hspace{0pt}%DIFAUXCMD
 .
 }\DIFaddend The samples' \DIFdelbegin \DIFdel{mean }\DIFdelend \DIFaddbegin \DIFadd{median }\DIFaddend diameters, $\avg{d_{\text{p}}}$,
 are reported in Table~\ref{table:sem_data} together
@@ -908,7 +908,7 @@ also are plotted in Fig.~\ref{fig:sizedistribution}.
     \num{500} (blue), 
     \num{700} (yellow), 
     \num{900} (green), 
-    and \SI{1100}{\per\minute}
+    and \SI{1100}{\per\minute} 
     (red).
     HPC results are projections of joint
     distributions such as the example in
@@ -919,7 +919,6 @@ also are plotted in Fig.~\ref{fig:sizedistribution}.
     examples in Fig.~\ref{fig:semimages}.}
   \label{fig:sizedistribution}
 \end{figure}
-
 
 \DIFdelbegin \DIFdel{Based on the outcome of this survey, we synthesize
 the remainder of the particles in this study
@@ -1384,7 +1383,7 @@ facility by the NYU MRSEC.
   {\let\endmcitethebibliography\endthebibliography}{}
 \DIFdelbegin %DIFDELCMD < \begin{mcitethebibliography}{29}
 %DIFDELCMD < %%%
-\DIFdelend \DIFaddbegin \begin{mcitethebibliography}{47}
+\DIFdelend \DIFaddbegin \begin{mcitethebibliography}{49}
 \DIFaddend \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -1792,20 +1791,29 @@ Chern,~C. Emulsion polymerization mechanisms and kinetics. \emph{Prog. Polym.
 \bibitem[Arshady(1992)]{arshady92}
 Arshady,~R. Suspension, emulsion, and dispersion polymerization: A
   methodological survey. \emph{Colloid Polym. Sci.} \textbf{1992}, \emph{270},
-  717--732\DIFdelbegin %DIFDELCMD < \relax
-%DIFDELCMD < \mciteBstWouldAddEndPuncttrue
-%DIFDELCMD < \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-%DIFDELCMD < {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-%DIFDELCMD < \EndOfBibitem
-%DIFDELCMD < \bibitem[Mazzoli and Favoni(2012)Mazzoli, and Favoni]{mazzoli12}
+  717--732\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\DIFdelbegin %DIFDELCMD < \bibitem[Mazzoli and Favoni(2012)Mazzoli, and Favoni]{mazzoli12}
 %DIFDELCMD < %%%
-\DIFdel{Mazzoli,~A.; Favoni,~O. Particle size, size distribution and morphological
+\DIFdel{Mazzoli,~A.; Favoni,~O.Particle size,size distribution and morphological
   evaluation of airborne dust particles of diverse woods by Scanning Electron
-  Microscopy and image processing program. }\emph{\DIFdel{Powder Tech.}} %DIFAUXCMD
-\textbf{\DIFdel{2012}}%DIFAUXCMD
-\DIFdel{,
-  }\emph{\DIFdel{225}}%DIFAUXCMD
-\DIFdel{, 65--71}\DIFdelend \relax
+  Microscopy and image processing program.
+  }\DIFdelend \DIFaddbegin \bibitem[Esmaeili \latin{et~al.}(2012)Esmaeili, Lin, and
+  Yeung]{esmaeili2012stability}
+\DIFadd{Esmaeili,~P.; Lin,~F.; Yeung,~A. Stability of emulsified heavy oil: The
+  combined effects of deterministic DLVO forces and random surface charges.
+  }\DIFaddend \emph{\DIFdelbegin \DIFdel{Powder Tech.}\DIFdelend \DIFaddbegin \DIFadd{Langmuir}\DIFaddend } \textbf{2012}, \emph{\DIFdelbegin \DIFdel{225}\DIFdelend \DIFaddbegin \DIFadd{28}\DIFaddend }, \DIFdelbegin \DIFdel{65--71}\DIFdelend \DIFaddbegin \DIFadd{4948--4954}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Lin \latin{et~al.}(2014)Lin, Suda, and Yeung]{lin2014small}
+\DIFadd{Lin,~F.; Suda,~J.; Yeung,~A. A small point regarding DLVO coagulation
+  conditions. }\emph{\DIFadd{J. Colloid Interface Sci.}} \textbf{\DIFadd{2014}}\DIFadd{, }\emph{\DIFadd{430}}\DIFadd{,
+  113--115}\DIFaddend \relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -1830,6 +1838,7 @@ Beylerian,~N.~M.; Vardanyan,~L.~R.; Harutyunyan,~R.~S.; Vardanyan,~R.~L.
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \end{mcitethebibliography}
+
 
 \end{document}
 %%% Local Variables:
